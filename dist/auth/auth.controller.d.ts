@@ -35,7 +35,7 @@ export declare class AuthController {
     private service;
     constructor(authService: AuthService, service: UserService);
     create(createAuthDto: CreateAuthDto): string;
-    findAll(body: resetdto, req: any): Promise<"check your email to reset password" | BadRequestException>;
+    findAll(body: resetdto, req: any): Promise<BadRequestException | "check your email to reset password">;
     update(id: string, updateAuthDto: UpdateAuthDto): string;
     remove(id: string): void;
     two(req: any): Promise<NotFoundException | {
